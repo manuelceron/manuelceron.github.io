@@ -1,346 +1,230 @@
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <title>Notas rápidas</title> 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manuel Cerón - Portafolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
   <style>
-  *{
-  margin:0;
-  padding:0;
+    body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f5f5f5;
+  color: #333;
 }
-input#search{
-    width: 300px;
-    height: 35px;
-    background: #ffffff;
-    border: none;
-    font-size: 10pt;
-    float: right;
-    color: #000;
-  padding-left: 45px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+header.profile {
+  text-align: center;
+  padding: 40px 0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.social a {
+  margin: 0 10px;
+  color: #0073b1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section {
+  margin: 40px 0;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0073b1;
+  padding-bottom: 5px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.skills li {
+  background: #fff;
+  padding: 10px;
   border-radius: 5px;
- 
-   
-    -webkit-transition: background .55s ease;
-  -moz-transition: background .55s ease;
-  -ms-transition: background .55s ease;
-  -o-transition: background .55s ease;
-  transition: background .55s ease;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
-.xbutton:hover, .tbutton:hover{
-  color:#7c7a7a;
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #888;
+  font-size: 0.9rem;
 }
-.xbutton{
-  display:inline !important;
-  float:left !important;
-  margin-top: -24px !important;
-  margin-left: -15px !important;
-  font-size: 2em !important;
-}
-.tbutton{
-  display:inline !important;
-  float:right !important;
-  margin-top: -24px !important;
-  margin-right: -12px !important;
-  font-size: 2em !important;
-}
-body{
-  font-family:arial,sans-serif;
-  font-size:100%;
-  margin:1em;
-  background:#666;
-  color:#fff;
-}
-h2,p{
-  font-size:100%;
-  font-weight:normal;
-}
-ul,li{
-  list-style:none;
-}
-ul{
-  overflow:hidden;
-  padding:3em;
-}
-ul li a{
-  text-decoration:none;
-  color:#000;
-  background:#ffc;
-  display:block;
-  height:10em;
-  width:10em;
-  padding:1em;
-  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
-  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-  -moz-transition:-moz-transform .15s linear;
-  -o-transition:-o-transform .15s linear;
-  -webkit-transition:-webkit-transform .15s linear;
-}
-ul li{
-  margin:1em;
-  float:left;
-}
-ul li h2{
-  font-size:140%;
-  font-weight:bold;
-  padding-bottom:10px;
-}
-ul li p{
-  font-family:"Reenie Beanie",arial,sans-serif;
-  font-size:180%;
-}
-ul li a:not(.active){
-  -webkit-transform: rotate(-6deg);
-  -o-transform: rotate(-6deg);
-  -moz-transform:rotate(-6deg);
-}
-ul li:nth-child(even) a:not(.active){
-  -o-transform:rotate(4deg);
-  -webkit-transform:rotate(4deg);
-  -moz-transform:rotate(4deg);
-  position:relative;
-  top:5px;
-  background:#cfc;
-}
-ul li:nth-child(3n) a:not(.active){
-  -o-transform:rotate(-3deg);
-  -webkit-transform:rotate(-3deg);
-  -moz-transform:rotate(-3deg);
-  position:relative;
-  top:-5px;
-  background:#ccf;
-}
-ul li:nth-child(5n) a:not(.active){
-  -o-transform:rotate(5deg);
-  -webkit-transform:rotate(5deg);
-  -moz-transform:rotate(5deg);
-  position:relative;
-  top:-10px;
-}
-ul li a:hover,ul li a:focus,.active{
-  box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
-  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
-  -webkit-transform: scale(1.25);
-  -moz-transform: scale(1.25);
-  -o-transform: scale(1.25);
-  position:relative;
-  z-index:5;
-}
-ol{text-align:center;}
-ol li{display:inline;padding-right:1em;}
-ol li a{color:#fff;}
-.stylebutton{
-align-items:flex-start;
-background-color:rgb(0, 123, 255);
-border-bottom-color:rgb(0, 123, 255);
-border-bottom-left-radius:160px;
-border-bottom-right-radius:160px;
-border-bottom-style:solid;
-border-bottom-width:0.998933px;
-border-image-outset:0;
-border-image-repeat:stretch;
-border-image-slice:100%;
-border-image-source:none;
-border-image-width:1;
-border-left-color:rgb(0, 123, 255);
-border-left-style:solid;
-border-left-width:0.998933px;
-border-right-color:rgb(0, 123, 255);
-border-right-style:solid;
-border-right-width:0.998933px;
-border-top-color:rgb(0, 123, 255);
-border-top-left-radius:160px;
-border-top-right-radius:160px;
-border-top-style:solid;
-border-top-width:0.998933px;
-bottom:10px;
-box-sizing:border-box;
-color:rgb(255, 255, 255);
-cursor:pointer;
-display:block;
-font-family:arial, sans-serif;
-font-size:24px;
-font-stretch:100%;
-font-style:normal;
-font-variant-caps:normal;
-font-variant-east-asian:normal;
-font-variant-ligatures:normal;
-font-variant-numeric:normal;
-font-weight:700;
-height:49.9935px;
-letter-spacing:normal;
-line-height:36px;
-margin-bottom:0px;
-margin-left:0px;
-margin-right:0px;
-margin-top:0px;
-overflow-x:visible;
-overflow-y:visible;
-padding-bottom:6px;
-padding-left:14.4px;
-padding-right:14.4px;
-padding-top:6px;
-position:fixed;
-right:10px;
-text-align:center;
-text-indent:0px;
-text-rendering:auto;
-text-shadow:none;
-text-size-adjust:100%;
-text-transform:none;
-transition-delay:0s, 0s, 0s, 0s;
-transition-duration:0.15s, 0.15s, 0.15s, 0.15s;
-transition-property:color, background-color, border-color, box-shadow;
-transition-timing-function:ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-user-select:none;
-vertical-align:middle;
-width:49.9935px;
-word-spacing:0px;
-writing-mode:horizontal-tb;
--webkit-appearance:none;
--webkit-tap-highlight-color:rgba(0, 0, 0, 0);
--webkit-border-image:none;
-    }
+
   </style>
 </head>
 <body>
-  <div id="aplicacion">
-       <div>
-        <h1>Notas rápidas</h1> 
-        <input placeholder="Buscar..." v-model="buscarTarea" id="search" type="search">
-      </div> 
-    <div id="listado-tareas">
-    
-  <ul>
-    <li
-      is="tarea-item"
-      v-for="(tarea, index) in filtrarTareas"
-      v-if="tarea.estado=='Pendiente'"
-      v-bind:key="tarea.id"
-      v-bind:id="tarea.id"
-      v-bind:titulo="tarea.titulo"
-      v-bind:estado="tarea.estado"
-      v-on:estadoterminada="tarea.estado='Terminada'"
-      v-on:estadopendiente="tarea.estado='Pendiente'"
-      v-on:edit="edit(tarea.id,index)"
-      v-on:remove="remove(index)"
-    ></li>
-  </ul>
-<h1>Terminadas</h1>
-<ul>
-    <li
-      is="tarea-item"
-      v-for="(tarea, index) in filtrarTareas"
-      v-if="tarea.estado=='Terminada'"
-      v-bind:key="tarea.id"
-      v-bind:id="tarea.id"
-      v-bind:titulo="tarea.titulo"
-      v-bind:estado="tarea.estado"
-      v-on:estadoterminada="tarea.estado='Terminada'"
-      v-on:estadopendiente="tarea.estado='Pendiente'"
-      v-on:edit="edit(tarea.id,index)"
-      v-on:remove="remove(index)"
-    ></li>
-  </ul>
-  <button class="stylebutton"  v-on:click="agregarTarea">+</button>
-</div>
-  </div>
-  
-  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-ls/3.2.1/vue-ls.min.js"></script>
+  <div class="container">
+    <header class="profile">
+      <h1>Manuel Cerón</h1>
+      <p class="tagline">Desarrollador Full Stack | Laravel · Vue.js · Docker · SQL</p>
+      <div class="social">
+        <a href="https://github.com/manuelceron" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/manuelceron1/" target="_blank">LinkedIn</a>
+        <a href="mailto:manuelceron1@gmail.com">manuelceron1@gmail.com</a>
+      </div>
+    </header>
 
-  <script>
-    Vue.component('tarea-item', {
-  template: `\
-    <li :id="id">\
-      <a href="#">\
-            <span \
-              class="xbutton"
-              title="Eliminar" v-on:click="$emit('remove')">x</span>\
-            <span class="tbutton" title="Marcar como Terminada" v-if="estado=='Pendiente'" v-on:click="$emit('estadoterminada')">✓</span>\
-            <span class="tbutton" title="Marcar como Pendiente" v-if="estado=='Terminada'" v-on:click="$emit('estadopendiente')">✓</span>\
-             <p contenteditable="true" :id="'item'+id" :item="id" @blur="$emit('edit')" >{{ titulo }}</p>\
-      </a>\
-    </li>\
-  `,     
-  props: ['id', 'titulo', 'estado']
-})
-new Vue({
-  el: '#aplicacion',
-  data: {
-    nuevaTareaTexto: '',
-    tareas: [
-    ],
-    sigTareaId: 1,
-    buscarTarea: '',
-    verTareas: 'Pendiente'
-  },
-  computed: {
-   filtrarTareas() {
-    const search = this.buscarTarea.toLowerCase().trim();
-    if (!search) return this.tareas;
-     return this.tareas.filter(c => c.titulo.toLowerCase().indexOf(search) > -1);
-    }
-   },
-   updated() {
-     //this.persist();
-    // console.log(this.tareas);
-   },
-   mounted() {
-    if (localStorage.getItem('tareas')) {
-      try {
-         this.tareas = JSON.parse(localStorage.getItem('tareas'));
-         //console.log("loaded");
-      } catch(e) {
-        localStorage.removeItem('tareas');
-         //console.log("empty");
-      }
-    }
-    if (localStorage.getItem('sigTareaId')) {
-      try {
-         this.sigTareaId = JSON.parse(localStorage.getItem('sigTareaId'));
-         //console.log("loaded");
-      } catch(e) {
-        localStorage.removeItem('sigTareaId');
-         //console.log("empty");
-      }
-    } 
-   },
-  methods: {
-    agregarTarea: function () {
-      this.tareas.push({
-        id: this.sigTareaId++,
-        titulo: this.nuevaTareaTexto,
-        estado: 'Pendiente',
-      })
-      this.nuevaTareaTexto = '';
+    <section class="section" id="sobre-mi">
+      <h2>👨‍💻 Sobre mí</h2>
+      <p>
+        Profesional en Licenciatura en Informática, Desarrollador de software y Especialista en Seguridad Informática con más de 10 años de experiencia desarrollando soluciones web, administrativas
+        y educativas. Con Sólida experiencia en PHP, Laravel, Vue.js y arquitectura MVC. 
+        Adicionalmente experiencia en infraestructura, formación TIC y consultoría tecnológica.
+      </p>
+    </section>
+
+    <section class="section" id="experiencia">
+      <h2>🏢 Experiencia Destacada</h2>
+
+      <div class="card">
+        <h3>Sam Sistemas <span> | Full Stack Developer (2022 - Actualidad)</span></h3>
+        <p>Desarrollo de sistemas POS, plataformas educativas, CRM, PQR y soporte TI.</p>
+      </div>
+
+      <div class="card">
+        <h3>CDAN <span> | Profesional TI (2024)</span></h3>
+        <p>Desarrollo web institucional, sistema PQR y optimización de redes y CCTV.</p>
+      </div>
+
+      <div class="card">
+        <h3>Universidad de Nariño <span> | Docente TIC (2023)</span></h3>
+        <p>Capacitación acerca de herramientas para mejorar la productividad en Administración de Empresas</p>
+      </div>
+
+      <div class="card">
+        <h3>JL&RB - Electromillonaria <span> | Analista y desarrollador de software (2021 - 2022)</span></h3>
+        <p>Como analista y desarrollador de software, participé en procesos para mejorar la arquitectura del software, actualizaciones de versiones, y migraciones entre frameworks. Proporcioné soporte continuo, implementé actualizaciones para mejorar la usabilidad y eficiencia de las aplicaciones, capacité al personal, realicé limpieza de malware en el servidor, y gestioné a un equipo de personal Junior. También lideré el despliegue de entornos de pruebas e implementé un sistema de control de versiones con Git.</p>
+      </div>
+
+      <div class="card">
+        <h3>Consorcio S&P Education Line <span> | Docencia (2018 - 2019)</span></h3>
+        <p>Capacitación de docentes educativos en el uso de las TIC en educación para la construcción de OVA y el uso de las TIC dirigido a la comunidad en general de las instituciones en el marco del proyecto PIEMSA de la Secretaría de Educación Municipal de Pasto.</p>
+      </div>
+
+      <div class="card">
+        <h3>Fundación Educativa High System Training <span> | Docencia (2015 - 2018)</span></h3>
+        <p>Cursos:
+            <ul>
+              <li>Asesor de Proyectos Gubernamentales en Línea</li>
+              <li>Redes y cableado estructurado</li>
+              <li>Certificación Microsoft 70-480</li>
+              <li>Trabajos de Grado</li>
+              <li>Mantenimiento de computadoras</li>
+              <li>Sistemas de gestión de contenidos</li> 
+              <li>Programación orientada a objetos con PHP</li>
+             </ul>
+    </p>
+    <p>
+              <ul>
+              <li>Software: instalación de Moodle, desarrollo de sistema de agendamiento de citas.</li>
+              <li>Trabajo Técnico: Mantenimiento correctivo a la red de cableado estructurado.</li>
+            </ul>
+        </p>
+      </div>
       
-      //this.verTareas = 'Pendiente';
-      this.persist();
-    },
-    edit(id,index) {
-      //console.log(index);
-      this.tareas[index].titulo = document.getElementById("item"+id).innerText;
-      this.persist();
-    },
-    remove(index) {
-      if(confirm('Esta seguro que desea eliminar esta nota?')){
-        this.tareas.splice(index, 1);
-        this.persist();
-      }
-    },
-    persist() {
-      localStorage.tareas = JSON.stringify(this.tareas);
-      localStorage.sigTareaId = JSON.stringify(this.sigTareaId);
-      console.log("save");
-    }
-  }
-})
-  </script>
+    </section>
+
+    <section class="section" id="proyectos">
+      <h2>💡 Proyectos</h2>
+
+      <div class="card">
+        <h3>Sistema POS</h3>
+        <p>Laravel + Livewire + MySQL · Contabilidad, caja, reportes, precios y más.</p>
+        <span>https://pos.mate.net.co</span>
+      </div>
+
+      <div class="card">
+        <h3>laralight</h3>
+        <p>Paquete para Laravel, permite crear migraciones, modelos, controladores para Laravel y API a partir de instrucciones desde consola.</p>
+        <span>https://packagist.org/packages/manuelceron/laralight</span>
+      </div>
+      
+      <div class="card">
+        <h3>Diseñador de Logica de Negocios</h3>
+        <p>Este script es un diseñador de modulos CRUD el cual permite crear modulos o tablas, y especificar atributos de los campos y genera un archivo JSON para ser usado como documento de instrucciones de un generador de código en distintos frameworks</p>
+        <a href="https://manuelceron.github.io/bussiness_logic_designer" target="_blank">Ver repositorio</a>
+      </div>
+      
+      <div class="card">
+        <h3>Alerta de mayúscula</h3>
+        <p>Este script es un MVP para identificar el estado del bloqueo de mayúscula en un formulario, especialmente se necesita en campos de tipo password</p>
+        <a href="https://manuelceron.github.io/mayus-alert" target="_blank">Ver repositorio</a>
+      </div>
+      
+      <div class="card">
+        <h3>MyLocalStorage.js</h3>
+        <p>Este script es un ejemplo de uso de Local Storage, util para recordar datos</p>
+        <a href="https://github.com/manuelceron/mylocalstorage" target="_blank">Ver repositorio</a>
+      </div>
+      
+      <div class="card">
+        <h3>WWWSqlDesigner</h3>
+        <p>Despliegue de SQLDesigner, útil para diseñar bases de datos SQL, esta herramienta ha sido bifurcada de ondras/wwwsqldesigner</p>
+        <a href="https://manuelceron.github.io/wwwsqldesigner" target="_blank">Ver repositorio</a>
+      </div>
+    </section>
+
+    <section class="section" id="habilidades">
+      <h2>🛠️ Habilidades Técnicas</h2>
+      <ul class="skills">
+        <li>Laravel / Lumen / PHP</li>
+        <li>Vue.js / JavaScript</li>
+        <li>SQL (MySQL, PostgreSQL, MSSQL)</li>
+        <li>Docker / Azure / GitHub Actions</li>
+        <li>Git / GitHub / Git Flow</li>
+        <li>Scrum / ITIL / DevOps</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>© 2025 Manuel Cerón · Desarrollado con ❤️ y código limpio</p>
+    </footer>
+  </div>
 </body>
 </html>
